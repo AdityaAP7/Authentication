@@ -1,0 +1,62 @@
+⭐ Assigment - Aditya Palodkar
+
+Technologies used - NodeJS, Express and MongoDB
+
+A. API in NodeJS/Python
+Create an API in NodeJS/Python that allows user login via username, password
+a. username to be alphanumeric
+b. username to be between 6-12 letters
+c. password to allow alphabet, numbers, special characters
+d. minimum password length is 6
+
+⭐ Writing everything in the proper documentation format
+
+
+## Project Setup and Execution Steps:
+
+### 1. Installation
+Make sure you have Node.js installed on your machine.
+
+### 2. Project Initialization
+Create a new project directory and navigate to it in your terminal.
+
+### 3. Create Files and Folders
+- Create an `index.js` file in the project root directory.
+- Create a `models` folder and inside it, create a `User.js` file.
+- Create a `controllers` folder and inside it, create an `AuthController.js` file.
+- Create a `middlewares` folder and inside it, create a `validationMiddleware.js` file.
+- Create a `routes` folder and inside it, create an `authRoutes.js` file.
+
+### 4. User Model
+Create a `User` model with the following fields:
+- `username` (String): The username of the user. It should be unique and alphanumeric, with a length of 6-12 characters.
+- `email` (String): The email address of the user. It should be unique.
+- `password` (String): The password of the user. It should be at least 6 characters long.
+
+### 5. Authentication Controller
+Create an `AuthController` with the following methods:
+- `register`: This method handles the registration of a new user. It receives the username, email, and password in the request body. It creates a new user in the database and returns the created user.
+- `login`: This method handles the login of a user. It receives the username and password in the request body. It finds the user in the database based on the username and checks if the provided password matches the stored password. If the login is successful, it returns a success message. If the username or password is incorrect, it returns an error message.
+
+### 6. Validation Middleware
+Create a `validationMiddleware` with the following method:
+- `validateUser`: This method validates the username, email, and password received in the request body. It checks if the username is alphanumeric and has a length of 6-12 characters. It also checks if the email is valid (contains '@'). It checks if the password is at least 6 characters long and contains at least one letter, one number, and one special character.
+
+### 7. Routing
+Create routes in the `authRoutes.js` file for the following endpoints:
+- `/register`: This route should be a POST request that calls the `validateUser` middleware and then the `register` method from the `AuthController`.
+- `/login`: This route should be a POST request that calls the `login` method from the `AuthController`.
+
+### 8. Server Setup
+In the `index.js` file, set up an Express server that listens on a specific port (e.g., 4000). Use the `body-parser` middleware to parse JSON request bodies. Mount the authentication routes under a specific base path (e.g., '/auth').
+
+### 9. Database Connection
+Connect to a MongoDB database using a library like Mongoose. Use the appropriate connection URL and credentials.
+
+### 10. Run the Server
+Start the server by running the `index.js` file. You should see a message indicating that the server is running and connected to the database.
+
+### 11. Test the API
+You can test the API using tools like cURL, Postman, or by sending HTTP requests from your preferred programming language. Use the `/register` endpoint to create a new user and the `/login` endpoint to authenticate a user.
+
+That's it! You have successfully created a Node.js project with an authentication API for user registration and login
