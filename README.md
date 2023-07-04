@@ -22,11 +22,10 @@ d. Minimum password length is 6
 Email-validation
 ![email-validation](https://github.com/AdityaAP7/Authentication/blob/main/screenshots/email-validation.PNG)
 
-Successfully log in using the username
-![Successfully login using username](https://github.com/AdityaAP7/Authentication/blob/main/screenshots/screenshots/successfully%20login%20using%20username.PNG)
-
 successfully registered using the username
 ![Successfully login using username](https://github.com/AdityaAP7/Authentication/blob/main/screenshots/screenshots/successfully%20registered.PNG)
 
+Successfully log in using the username
+![Successfully login using username](https://github.com/AdityaAP7/Authentication/blob/main/screenshots/screenshots/successfully%20login%20using%20username.PNG)
 
 
