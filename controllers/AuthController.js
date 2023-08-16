@@ -36,7 +36,5 @@ exports.login = async (req, res) => {
     }
   };
 
-//ok
-//ok
-//ok
+
   
