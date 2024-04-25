@@ -36,24 +36,4 @@ exports.login = async (req, res) => {
     }
   };
 
-// User login
-exports.login = async (req, res) => {
-    try {
-      const { username, password } = req.body;
-      const user = await User.findOne({ username });
-  
-      if (user) {
-        if (user.password === password) {
-          res.json({ message: 'Login successful' });
-        } else {
-          res.status(401).json({ error: 'Invalid credentials' });
-        }
-      } else {
-        res.status(401).json({ error: 'Email is not registered. Please sign up.' });
-      }
-    } catch (error) {
-      res.status(400).json({ error: error.message });
-    }
-  };
 
-  
